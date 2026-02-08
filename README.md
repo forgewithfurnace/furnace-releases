@@ -1,6 +1,6 @@
 # FURNACE Releases
 
-Pre-built binaries and extension distributions for [FURNACE](https://github.com/forgewithfurnace/furnace) -- the AI-powered MCP server for structured code generation, analysis, and project orchestration.
+Pre-built binaries and extension distributions for [FURNACE](https://github.com/forgewithfurnace/) -- the AI-powered MCP server for structured code generation, analysis, and project orchestration.
 
 ## IDE Extensions
 
@@ -75,4 +75,4 @@ FURNACE (Formal Unified Runtime for Network-Augmented Code Engineering) is a Rus
 - **Bidirectional sync** -- Linear, Jira, Notion
 - **IDE extensions** -- VS Code and JetBrains with live dashboards, SCROLL editors, and visual search
 
-Learn more at [github.com/forgewithfurnace/furnace](https://github.com/forgewithfurnace/furnace).
+Learn more at [github.com/forgewithfurnace/furnace](https://github.com/forgewithfurnace/).
