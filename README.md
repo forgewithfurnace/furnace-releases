@@ -1,12 +1,12 @@
 # FURNACE Releases
 
-Pre-built binaries and extension distributions for [FURNACE](https://github.com/forgewithfurnace/) -- the AI-powered MCP server for structured code generation, analysis, and project orchestration.
+Extension distributions and install instructions for [FURNACE](https://github.com/forgewithfurnace/) -- the AI-powered MCP server for structured code generation, analysis, and project orchestration.
 
 ## IDE Extensions
 
 ### VS Code -- "Forge with Furnace"
 
-Download the `.vsix` file and install manually:
+Download the `.vsix` file from this repo and install manually:
 
 ```bash
 code --install-extension extensions/vscode/furnace-forge-project-0.2.0.vsix
@@ -16,7 +16,7 @@ Or search **"Forge with Furnace"** on the VS Code Marketplace.
 
 ### JetBrains -- "furnace-project"
 
-Download the `.zip` file and install via:
+Download the `.zip` file from this repo and install via:
 
 **Settings > Plugins > Gear icon > Install Plugin from Disk** -- select the `.zip` file.
 
@@ -24,24 +24,26 @@ Or search **"furnace-project"** on the JetBrains Marketplace (IntelliJ, WebStorm
 
 ## Pre-built Binaries
 
-| Platform | File | Notes |
-|----------|------|-------|
-| macOS (Apple Silicon) | `binaries/furnace-aarch64-apple-darwin.tar.gz` | Also runs on Intel Macs via Rosetta 2 |
-| Linux (x86_64) | `binaries/furnace-x86_64-unknown-linux-gnu.tar.gz` | |
-| Windows (x86_64) | `binaries/furnace-x86_64-pc-windows-gnu.zip` | |
+Pre-built binaries are hosted on [GitHub Releases](https://github.com/forgewithfurnace/furnace/releases).
+
+| Platform | Notes |
+|----------|-------|
+| macOS (Apple Silicon) | Also runs on Intel Macs via Rosetta 2 |
+| Linux (x86_64) | |
+| Windows (x86_64) | |
 
 ### Install from binary
 
 ```bash
-# macOS
-curl -L https://github.com/forgewithfurnace/furnace-releases/raw/main/binaries/furnace-aarch64-apple-darwin.tar.gz | tar xz
+# macOS (Apple Silicon — also runs on Intel via Rosetta 2)
+curl -L https://github.com/forgewithfurnace/furnace/releases/latest/download/furnace-aarch64-apple-darwin.tar.gz | tar xz
 sudo mv furnace /usr/local/bin/
 
-# Linux
-curl -L https://github.com/forgewithfurnace/furnace-releases/raw/main/binaries/furnace-x86_64-unknown-linux-gnu.tar.gz | tar xz
+# Linux (x86_64)
+curl -L https://github.com/forgewithfurnace/furnace/releases/latest/download/furnace-x86_64-unknown-linux-gnu.tar.gz | tar xz
 sudo mv furnace /usr/local/bin/
 
-# Windows -- download and extract the .zip, add furnace.exe to PATH
+# Windows (x86_64) — download the .zip from GitHub Releases, extract, add furnace.exe to PATH
 ```
 
 ### Alternative install methods
