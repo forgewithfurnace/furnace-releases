@@ -1,0 +1,86 @@
+# Smithery Registry Configuration for FURNACE MCP Server
+# https://smithery.ai
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      workspace_root:
+        type: string
+        description: "Path to the project workspace root"
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["furnace-mcp"],
+      env: config.workspace_root ? { FURNACE_WORKSPACE: config.workspace_root } : {}
+    })
+
+name: furnace-mcp
+displayName: FURNACE
+description: >
+  AI-powered code generation and analysis MCP server with knowledge graph,
+  tiered search engine, and automated workflow orchestration. Fully self-contained
+  with embedded SQLite, KuzuDB (graph), and LanceDB (vector) databases.
+icon: https://raw.githubusercontent.com/forgewithfurnace/furnace/main/furnace-icon.png
+author: Gyan
+license: MIT
+repository: https://github.com/forgewithfurnace/furnace-releases
+homepage: https://github.com/forgewithfurnace/furnace-releases
+version: 0.2.0
+
+tools:
+  - name: search_code
+    description: Search the codebase using tiered search (vector, hybrid, agentic)
+  - name: search_feedback
+    description: Submit satisfaction feedback to improve search strategy learning
+  - name: create_scroll
+    description: Create a SCROLL specification from a natural-language intent
+  - name: validate_scroll
+    description: Validate constraints, dependencies, types, and breaking changes
+  - name: execute_scroll
+    description: Execute a SCROLL — run all tasks, generate code, apply changes
+  - name: list_scrolls
+    description: List all SCROLLs with external link data, optionally filtered by status
+  - name: get_scroll
+    description: Retrieve a specific SCROLL with tasks, metadata, and external links
+  - name: analyze_file
+    description: Analyze a file for code quality, complexity, and issues
+  - name: list_recipes
+    description: List available prompt template recipes with descriptions
+  - name: render_recipe
+    description: Render a recipe template with variable substitution
+  - name: configure_sync
+    description: Configure an external system (Linear, Jira, Notion) for bidirectional sync
+  - name: link_issue
+    description: Link a SCROLL to an external issue/page with bidirectional reference
+  - name: push_scroll
+    description: Push a SCROLL's status to an external system
+  - name: sync_status
+    description: Compute the mapped status between a SCROLL and an external system
+  - name: list_connections
+    description: List all external system connections with ISO 8601 timestamps
+  - name: get_metrics
+    description: Get aggregate usage metrics — searches, scrolls, latency, auto-forge runs
+  - name: furnace_status
+    description: Get server health, recipe count, database stats, and feature suggestions
+  - name: configure_kb
+    description: Register an external knowledge base for enriched code generation
+  - name: query_kb
+    description: Query a knowledge base without persisting results
+  - name: sync_kb
+    description: Query a knowledge base and persist results into the local knowledge graph
+  - name: ingest_kb
+    description: Push a document to an external knowledge base
+  - name: kb_status
+    description: Get detailed status of a specific knowledge base
+
+keywords:
+  - mcp
+  - code-generation
+  - knowledge-graph
+  - ai
+  - code-analysis
+  - search
+  - rust
