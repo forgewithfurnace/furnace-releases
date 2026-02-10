@@ -28,7 +28,7 @@ author: Gyan
 license: MIT
 repository: https://github.com/forgewithfurnace/furnace-releases
 homepage: https://github.com/forgewithfurnace/furnace-releases
-version: 0.2.0
+version: 0.3.0
 
 tools:
   - name: search_code
