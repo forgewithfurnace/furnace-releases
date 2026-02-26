@@ -9,7 +9,7 @@ Extension distributions and install instructions for [FURNACE](https://github.co
 Download the `.vsix` file from this repo and install manually:
 
 ```bash
-code --install-extension extensions/vscode/furnace-forge-project-0.7.3.vsix
+code --install-extension extensions/vscode/furnace-forge-project-0.7.4.vsix
 ```
 
 Or search **"Forge with Furnace"** on the VS Code Marketplace.
@@ -68,9 +68,9 @@ cargo install furnace-mcp
 
 | Component | Version |
 |-----------|---------|
-| FURNACE MCP Server | 0.7.3 |
-| VS Code Extension | 0.7.3 |
-| IntelliJ Plugin | 0.7.3 |
+| FURNACE MCP Server | 0.7.4 |
+| VS Code Extension | 0.7.4 |
+| IntelliJ Plugin | 0.7.4 |
 
 ## What is FURNACE?
 
